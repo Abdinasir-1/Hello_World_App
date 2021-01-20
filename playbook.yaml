@@ -1,0 +1,10 @@
+- hosts: 127.0.0.1
+  connection: local
+  tasks:
+    - name: "Variable pulled"
+      include_vars:
+        file: data.yaml
+        name: data
+    - name: "run python app"
+      shell: python python_app.py
+      environment: "{{  data  }}"
