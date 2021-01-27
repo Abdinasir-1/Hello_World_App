@@ -1,18 +1,16 @@
 resource "local_file" "hello_world" {
     content = <<EOT
-iimport logging
+import logging
 import os
+from data import env
 
 logging.basicConfig(filename='test.log', level=logging.INFO, 
     format='%(asctime)s:%(levelname)s:%(message)s')
 
-Nasir = os.environ.get('N_VARIABLE')
-
-msg = "Hello World"
-print(msg)
-
 logging.info(' Hello World is printed to the console. This is a log information ')
 
+print(env)
+print(app)
 EOT
     filename = "/Users/Abdinasir.Mohamed/Desktop/hello_world.py"
 }
