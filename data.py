@@ -1,2 +1,2 @@
 env = ['Environment Variable']
-app = ['Hello World']
+app = 'Hello World'
